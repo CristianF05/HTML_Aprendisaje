@@ -1,0 +1,26 @@
+section: Es un contenido generico que agrupa contenido que 
+esta relacionado. Cuando creamos bloques cuyo contido es 
+parte de un bloque total usaremos section.
+
+article: Es un contenedor que representa contenido
+independiente, es decir, podemos leer ese fragmento en
+cualquier otro sitio y tendria sentido por si mismo.
+
+aside: se utiliza para representar contenido relacinado pero
+que no forma parte para del contenido principal.
+
+Anidamiento:
+    Un section puede contener article, por ejemplo, si tenemos
+    varios articulos que hablan sobre etiquetas HTML, deben ir
+    dentro de un section, ya que es contenido relacionado entre
+    si, y los article serian contenido independiente porque
+    podriamos leer uno sin hader leido el resto, y seguiria
+    teniendo sentido.
+    El article es definido como un componente de la pagina de
+    contenido independiente, esto implica que esta etiqueta pueda
+    tener un header y un footer propios.
+
+    También existe el caso en el que un article contenga varias
+    secciones, el artículo independiente podría ser navegadores y
+    este contener dentro secciones como navegadores más
+    utizados en 2023
