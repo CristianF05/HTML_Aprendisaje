@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tablas</title>
+    <style>
+        td {
+            background-color: steelblue;
+        }
+        col:nth-child(1) {
+            background-color: lightcoral;
+        }
+        col:nth-child(2) {
+            background-color: steelblue;
+        }
+    </style>
 </head>
 <body>
     <!--
@@ -26,61 +37,91 @@
         El contenido de la tabla debe ir dentro de una etiqueta "tbody" para representar el cuerpo de la tabla
 
         De forma opcional podemos colocar un "tfoot" a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen como suma de cantidades o total.
+
+        Para hacer que las celdas ocupen más de una fila o más de una columna tenemos 2 atributos:
+            'rowspan': sirve para que una celda ocupe más de una fila, el valor por defecto es 1 
+            'colspan' sirve para una celda ocupe más de una columna, el valor por defecto es 1
+
+        cuando necesitamos seleccionar una columna, tenemos la etiqueta "colgroup", que nos permite seleccionar una columna en concretro. Dentro pondremos tantas etiquetas "col" como columnas tengamos, cada etiqueta col equivaldrá a una columna siguiendo el mismo orden que tienen en la tabla
+
+        Si necesitamos que una etiqueta col agrupe más de una columna, tenemos el atributo 'span', que funciona exactamente igual que 'rowspan' y 'colspan'.
     -->
     <h1>Tablas</h1>
-    <tabla>
-        <tr>
-            <td>8:30 - 9:30</td>
-            <td>matematica</td>
-            <td>matematica</td>
-            <td>Sociales</td>
-            <td>matematica</td>
-            <td>matematica</td>
-        </tr>
-        <tr>
-            <td>9:30 - 10:25</td>
-            <td>Lengua</td>
-            <td>Lengua</td>
-            <td>Matemáticas</td>
-            <td>Ciencias</td>
-            <td>Lengua</td>
-        </tr>
-        <tr>
-            <td>10:25 - 11:20</td>
-            <td>Educación Física</td>
-            <td>Ciencias</td>
-            <td>Lengua</td>
-            <td>Lengua</td>
-            <td>Educación Física</td>
-        </tr>
-        <tr>
-            <td>11:20 - 11:45</td>
-            <td>Recreo</td>
-        </tr>
-        <tr>
-            <td>11:45 - 12:40</td>
-            <td>Inglés</td>
-            <td>Sociales</td>
-            <td>Inglés</td>
-            <td>Tutorìa</td>
-            <td>Inglés</td>
-        </tr>
-        <tr>
-            <td>12:40 - 13:35</td>
-            <td>Mùsica</td>
-            <td>Educaciòn Fisica</td>
-            <td>Mùsica</td>
-            <td>Religiòn</td>
-            <td>Musìca</td>
-        </tr>
-        <tr>
-            <td>13:35 - 14:30</td>
-            <td>Tecnologia</td>
-            <td>Francès</td>
-            <td>Tecnologia</td>
-            <td>Francès</td>
-            <td>Tecnologia</td>
-        </tr>
-    </tabla>
+    <table>
+        <caption>HORARIO DE CLASE</caption>
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th> </th>
+                <th>L</th>
+                <th>M</th>
+                <th>M</th>
+                <th>J</th>
+                <th>V</th>
+            </tr>
+        
+        <TBody></TBody>
+            <tr>
+                <td>8:30 - 9:30</td>
+                <td>matematica</td>
+                <td>matematica</td>
+                <td>Sociales</td>
+                <td>matematica</td>
+                <td>matematica</td>
+            </tr>
+            <tr>
+                <td>9:30 - 10:25</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Matemáticas</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+            </tr>
+            <tr>
+                <td>10:25 - 11:20</td>
+                <td>Educación Física</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Educación Física</td>
+            </tr>
+            <tr>
+                <td>11:20 - 11:45</td>
+                <td colspan="5">Recreo</td>
+            </tr>
+            <tr>
+                <td>11:45 - 12:40</td>
+                <td>Inglés</td>
+                <td>Sociales</td>
+                <td>Inglés</td>
+                <td>Tutorìa</td>
+                <td>Inglés</td>
+            </tr>
+            <tr>
+                <td>12:40 - 13:35</td>
+                <td rowspan="2">Tecnologia</td>
+                <td>Educaciòn Fisica</td>
+                <td>Mùsica</td>
+                <td>Religiòn</td>
+                <td>Musìca</td>
+            </tr>
+            <tr>
+                <td>13:35 - 14:30</td>
+                <td>Francès</td>
+                <td>Tecnologia</td>
+                <td>Francès</td>
+                <td>Tecnologia</td>
+            </tr>
+        <tfoot>
+            <tr>
+                <td colspan="5">Total de asicnaturas</td>
+                <td>12</td>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<!--
+    fieldset -> Se utiliza para agrupar elementes dentro de un formulario
+    legend -> Representa unaetiqueta para el contenido del fieldset
+    file -> Este input se utiliza para cargar archivos y enviarlos desde un formulario
+    meter -> Representa un valor dnetro de un range conocido
+    progess -> Representa el progreso de una tarea
+    textarea -> Se utiliza para introducir texto en un formulario
+-->
+<body>
+    <form>
+        <fieldset>
+            <label for="name">Nombre</label>
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" id="name">
+            </div>
+            <label for="surname">Apellidos</label>
+            <input type="text" id="surname">
+        </fieldset>
+        <!-- <input type="file">-->
+        <label for="fuel">combustible</label>
+        <meter id="fuel" min="0" max="100"
+        value="60" low="30"
+        high="75" obtimun="50">
+        </meter>
+        <label for="task">Tarea 1</label>
+        <progress id="task" max="100" value="10"></progress>
+        <label for="message">Mensaje</label>
+        <textarea name="" id="message" cols="70" rows="10"></textarea> 
+    </form>
+    
+</body>
+</html>
